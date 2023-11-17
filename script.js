@@ -23,8 +23,8 @@ function writePassword() {
 function generatePassword() {
   var passwordLangth = window.prompt("Enter the Langth of the password:");
 
-  if (passwordLangth < 4) {
-    password = "  Please,  at list the number you entered should be 4 or greater than 4."
+  if (passwordLangth < 4 || passwordLangth >= 128) {
+    password = "  Please,  at list the number you entered should be 4 -128 degiets."
 
 
   } else {
