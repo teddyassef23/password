@@ -27,12 +27,14 @@ function generatePassword() {
     langth = passwordLangth;
     let password = "";
   
+// All case checking lines
+
     var uperCaseResponse = confirm("Do you wnat Upercase in your new password?");
     if (uperCaseResponse == true){ 
       allCase += uperCase ;
-      console.log("Uper case responce" + uperCaseResponse)
+      // console.log("Uper case responce" + uperCaseResponse)
       password += uperCase[Math.floor(Math.random() * uperCase.length)];
-      console.log("uper case password" + password.toString())
+      // console.log("uper case password" + password.toString())
     }
     
     var lowerCaseResponse = confirm("Do you wnat lowerCase in your new password?");
@@ -43,7 +45,7 @@ function generatePassword() {
     
     var symbolResponse = confirm("Do you wnat symbol in your new password?");
     if (symbolResponse == true ){ allCase += symbol ;
-      console.log("symbol responce" + uperCaseResponse)
+      // console.log("symbol responce" + uperCaseResponse)
       password += symbol[Math.floor(Math.random() * symbol.length)];
     }
 
@@ -59,9 +61,7 @@ function generatePassword() {
       return password;
     }
    
-   
-
-    while (langth > password.length) {
+     while (langth > password.length) {
       password += allCase[Math.floor(Math.random() * allCase.length)]
     }
     console.log("password is :", password);
